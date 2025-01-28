@@ -36,7 +36,7 @@ export class AppService {
     const userExist = this.users.find(user => user.email === email);
 
     if (userExist) {
-      throw new ConflictException(`Ya existe un registro con el email: '${email}'`)
+      throw new ConflictException(`User with email : '${email}' already exist.`)
     }
 
     this.users.push(user);
